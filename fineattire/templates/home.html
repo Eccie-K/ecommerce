@@ -1,8 +1,47 @@
 {% extends 'base.html' %}
+{%load static%}
 
-{% block content%}
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+    </head>
+    <body>
+            {% block content%}
 
-{{block.super}}
+            
+            
+                <div class = "content">
+                        <div class = "text">
+                                YOUR ALL TIME FINE ATTIRE....<br>
+                                Dresses.Skirts.Tops.Blouses.Pants.Shoes
+                            </div>
+                        <div class="pic">
+                            <img src="https://us-common.s3.amazonaws.com/img/upload/pexels-photo-908309.jpeg">
+                        </div>
+            
+                           
+                </div>
+            
+                <div class="container">
+                        <div class="row">
+                          <div class="col-sm">
+                            <img src="">
+                          </div>
+                          <div class="col-sm">
+                            <img src="">
+                          </div>
+                          <div class="col-sm">
+                            <img src="">
+                          </div>
+                        </div>
+                      </div>
+           
+            
+            {%endblock%}        
+        </body>
 
-{%endblock%}
+</html>
+
+
 
