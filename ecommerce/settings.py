@@ -32,6 +32,7 @@ ALLOWED_HOSTS = []
 
 INSTALLED_APPS = [
     'fineattire',
+    'cart',
     'bootstrap3',
     'django.contrib.admin',
     'django.contrib.auth',

@@ -19,5 +19,6 @@ from django.contrib.auth import views
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
-    url(r'',include ('fineattire.urls'))
+    url(r'',include ('fineattire.urls')),
+    url(r'',include ('cart.urls')),
 ]

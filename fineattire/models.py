@@ -10,21 +10,33 @@ class tags(models.Model):
         return self.name
 
 
+class Category(models.Model):
+    title = models.CharField(max_length = 255)
+    category = models.BooleanField(default = False)
+    
+    def __str__(self):
+        return self.title
 
-        
 class Product(models.Model):
     name = models.CharField(max_length = 255)
     price = models.FloatField()
-    stock = models.IntegerField()
+    slug = models.SlugField()
+    category = models.ForeignKey(Category, on_delete = models.CASCADE)
+    preview_text = models.TextField(max_length = 300, verbose_name='Preview Text')
+    detail_text = models.TextField(max_length = 1000, verbose_name='Detail Text')
     image_url = models.CharField(max_length = 2083)
     tags = models.ManyToManyField(tags)
+    
+    
+    def __str__(self):
+        return self.name
 
 
 
-class Offer(models.Model):
-    code = models.CharField(max_length = 15)
-    description = models.CharField(max_length =255)
-    discount = models.FloatField()
+
+
+
+
 
 
 
